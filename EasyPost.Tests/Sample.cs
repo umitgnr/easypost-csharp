@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using EasyPost.Clients;
-using EasyPost.Services.Beta;
 
 namespace EasyPost.Tests
 {
@@ -8,9 +7,24 @@ namespace EasyPost.Tests
     {
         public async Task Main()
         {
-            Client client = new Client("my_api_key", ApiVersion.Latest);
+            Client client = new Client("api_key", ApiVersion.Beta);
 
-            EndShipperService service = client.EndShippers;
+            // Put beta feature services under beta namespace
+            // i.e. client.Beta.Endshippers.Create
+
+            // blind calls return void, throw api exception if error
+
+            // google doc for all exception types
+
+            // all collections are paginated, but hold off until later
+
+            // all static functions are called by XService
+
+            // verify instance/static functions are the same
+
+            // singular resource names
+
+            // remove request parameters
         }
     }
 }
