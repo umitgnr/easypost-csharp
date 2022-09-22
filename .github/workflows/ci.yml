@@ -17,9 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up dotnet tools
-        run: make setup-tools
-      - name: Install security-code-scan
-        run: make install-scanner
+        run: make install-tools
       - name: Run security analysis
         run: make scan
         # TODO: In the future, we can collect the output logs by enabling Code Scanning and using the pre-built GitHub Action: https://github.com/marketplace/actions/securitycodescan
